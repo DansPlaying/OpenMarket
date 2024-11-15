@@ -1,0 +1,42 @@
+---
+import Image from './Image.astro';
+import { carouselBannerImages } from '../../core/data/images-list';
+
+const images = carouselBannerImages;
+---
+
+<div id='default-carousel' class='relative w-full' data-carousel='slide'>
+  <!-- Carousel wrapper -->
+  <div class='relative h-[400px] md:h-[700px] overflow-hidden rounded-lg'>
+    <!-- Item 1 -->
+    {
+      images.map((link) => (
+        <div class='hidden duration-700 ease-in-out' data-carousel-item>
+          <Image
+            src={link}
+            class='w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700'
+            alt={'Image 1'}
+            aspectRatio='16:9'
+            widths={[400, 900]}
+            width={900}
+            layout='cover'
+            loading='lazy'
+            decoding='async'
+          />
+        </div>
+      ))
+    }
+    <Image
+    src={carouselBannerImages[0]}
+    class='w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700'
+    alt={'Image 1 banner-1'}
+    aspectRatio='16:9'
+    widths={[400, 900]}
+    width={900}
+    layout='cover'
+    loading='lazy'
+    decoding='async'
+  />
+  </div>
+</div>
+

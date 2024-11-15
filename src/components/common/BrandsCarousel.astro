@@ -1,0 +1,59 @@
+---
+const { brandsData } = Astro.props;
+
+const brands = brandsData.concat(brandsData);
+---
+
+<style>
+  .slider {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+     width: calc(250px * 12);
+  }
+
+  .slider .slide {
+    width: 250px;
+  }
+
+  /* .slider .slide img {
+      width: 100%;
+  } */
+
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-200px * 7));
+      transform: translateX(calc(-200px * 7));
+    }
+  }
+
+  .customDiv {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<div class='slider max-w-7xl'>
+  <div class='slide-track'>
+    {
+      brands.map((brand: string, index: number) => (
+        <div class='slide mt-2 customDiv p-2' >
+          <img src={brand} alt={`Brand ${index + 1}`} />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script></script>
