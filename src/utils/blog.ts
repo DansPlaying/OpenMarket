@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { PaginateFunction } from 'astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
@@ -198,12 +199,13 @@ export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: Pagin
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const categories = {};
+  const categories: { [key: string]: any } = {};
   posts.map((post) => {
     if (post.category?.slug) {
       categories[post.category?.slug] = post.category;
     }
-  });
+  }
+);
 
   return Array.from(Object.keys(categories)).flatMap((categorySlug) =>
     paginate(
@@ -222,7 +224,7 @@ export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFu
   if (!isBlogEnabled || !isBlogTagRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const tags = {};
+  const tags: { [key: string]: any }  = {};
   posts.map((post) => {
     if (Array.isArray(post.tags)) {
       post.tags.map((tag) => {

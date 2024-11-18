@@ -1,7 +1,12 @@
-import { getPermalink, getBlogPermalink } from '../../utils/permalinks';
+import { getPermalink } from '../../utils/permalinks';
 
 export const headerData = {
   links: [
+    {
+      text: 'Home',
+      href: getPermalink('/'),
+
+    },
     // {
     //   text: 'Homes',
     //   links: [
@@ -24,20 +29,32 @@ export const headerData = {
     //   ],
     // },
     {
-      text: 'Pages',
+      text: 'Products',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Equipment',
+          href: getPermalink('products/equipment'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'Frames and sunglasses',
+          href: getPermalink('products/frames'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
+          text: 'Supplies',
+          href: getPermalink('products/supplies'),
         },
+        {
+          text: 'Ophthalmic lenses',
+          href: getPermalink('products/lens'),
+        },
+
+      ],
+    },
+
+    {
+      text: 'Company',
+      href: getPermalink('/about'),
+      links: [
         {
           text: 'About us',
           href: getPermalink('/about'),
@@ -56,35 +73,35 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
-    },
+    // {
+    //   text: 'Landing',
+    //   links: [
+    //     {
+    //       text: 'Lead Generation',
+    //       href: getPermalink('/landing/lead-generation'),
+    //     },
+    //     {
+    //       text: 'Long-form Sales',
+    //       href: getPermalink('/landing/sales'),
+    //     },
+    //     {
+    //       text: 'Click-Through',
+    //       href: getPermalink('/landing/click-through'),
+    //     },
+    //     {
+    //       text: 'Product Details (or Services)',
+    //       href: getPermalink('/landing/product'),
+    //     },
+    //     {
+    //       text: 'Coming Soon or Pre-Launch',
+    //       href: getPermalink('/landing/pre-launch'),
+    //     },
+    //     {
+    //       text: 'Subscription',
+    //       href: getPermalink('/landing/subscription'),
+    //     },
+    //   ],
+    // },
     // {
     //   text: 'Blog',
     //   links: [
@@ -110,10 +127,7 @@ export const headerData = {
     //     },
     //   ],
     // },
-    // {
-    //   text: 'Widgets',
-    //   href: '#',
-    // },
+
   ],
   // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
@@ -121,15 +135,24 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Products',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        {
+          text: 'Equipment',
+          href: getPermalink('products/equipment'),
+        },
+        {
+          text: 'Frames and sunglasses',
+          href: getPermalink('products/frames'),
+        },
+        {
+          text: 'Supplies',
+          href: getPermalink('products/supplies'),
+        },
+        {
+          text: 'Ophthalmic lenses',
+          href: getPermalink('products/lens'),
+        },
       ],
     },
     // {
@@ -155,20 +178,29 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        {
+          text: 'About us',
+          href: getPermalink('/about'),
+        },
+        {
+          text: 'Contact',
+          href: getPermalink('/contact'),
+        },
+        {
+          text: 'Terms',
+          href: getPermalink('/terms'),
+        },
+        {
+          text: 'Privacy policy',
+          href: getPermalink('/privacy'),
+        },
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
+  // secondaryLinks: [
+  //   { text: 'Terms', href: getPermalink('/terms') },
+  //   { text: 'Privacy Policy', href: getPermalink('/privacy') },
+  // ],
   // socialLinks: [
   //   { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
   //   { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },

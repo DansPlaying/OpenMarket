@@ -1,0 +1,79 @@
+---
+import BrandsCarousel from '~/components/common/BrandsCarousel.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { suppliesBrands } from '../../core/data/images-list'; // Importa la lista de imágenes
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Supplies',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/supplies.jpg',
+      alt: 'supplies',
+    }}
+  >
+    <Fragment slot='title'>Supplies</Fragment>
+
+    <Fragment slot='subtitle'>
+      <span class='hidden sm:inline'>
+        <span class='font-semibold'>We distribute </span> all you need for optics and labs</span
+      >
+    </Fragment>
+  </Hero>
+
+  <Features2
+    title='Main products'
+    subtitle=''
+    tagline='Labs and optics'
+    items={[
+      {
+        title: 'Digital Surfacing',
+        description:
+          'Such as cutters, blocking alloy, surface blocking tape, coolant, digital polish, digital polishing tools, lens surface cleaners, andm more.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Traditional Surfacing',
+        description:
+          'Like blocking alloy/compound, surface blocking tape, surface blocks, cutters, coolant, plastic laps, Versatool, surface pads, drywash additive, lensdry additive and more.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Coatings & Chemicals',
+        description:
+          'Such as AR coaters, lens washers, lens detapers and more in the optical industry, anti-reflective materials to cleaners, tints/dyes, coolants, de-foaming agents, and more',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Finishing',
+        description: 'Including blocking pads and edging blocks, to aid in your finishing and lens edging processes',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Spare Parts',
+        description:
+          'For layout blockers, generators, coaters, edgers, vacuums, finish blockers, and other equipments.',
+        icon: 'flat-color-icons:approval',
+      },
+    ]}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-[#17173ce1]'></div>
+    </Fragment>
+  </Features2>
+
+  <div class='h-[5px] bg-blue-50 dark:bg-[#17173ce1]'></div>
+
+  <div class='bg-blue-50 dark:bg-[#17173ce1]'>
+    <div class='max-w-6xl mx-auto'>
+      <BrandsCarousel brandsData={suppliesBrands} />
+    </div>
+  </div>
+
+  <div class='h-[64px] bg-blue-50 dark:bg-[#17173ce1]'></div>
+</Layout>

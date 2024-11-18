@@ -42,6 +42,9 @@ export default defineConfig({
         'voice-presentation',
         'business-contact',
         'database',
+        'shop',
+        'in-transit',
+        'support'
       ],
     },
   }), ...whenExternalScripts(() =>

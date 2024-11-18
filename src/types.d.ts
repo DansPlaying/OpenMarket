@@ -273,12 +273,16 @@ export interface Steps extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
 }
 
+export type Layout = 'fixed' | 'constrained' | 'fullWidth' | 'cover' | 'responsive' | 'contained';
+
+
 export interface Content extends Omit<Headline, 'classes'>, Widget {
   content?: string;
   image?: string | unknown;
   items?: Array<Item>;
   columns?: number;
   isReversed?: boolean;
+  imageLayout?: Layout;
   isAfterContent?: boolean;
   hasBeforeContent?: boolean;
   callToAction?: CallToAction;

@@ -1,0 +1,85 @@
+---
+import BrandsCarousel from '~/components/common/BrandsCarousel.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { equipmentsBrands } from '../../core/data/images-list'; // Importa la lista de imágenes
+
+const metadata = {
+  title: 'Equipment',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/equipo-2.jpg',
+      alt: 'supplies',
+    }}
+  >
+    <Fragment slot='title'>Equipment</Fragment>
+
+    <Fragment slot='subtitle'>
+      <span class='hidden sm:inline'>
+        <span class='font-semibold'>We distribute </span> all you need for optics and labs, new or refurbished.</span
+      >
+    </Fragment>
+  </Hero>
+
+  <Features2
+    title='Main products'
+    tagline='New or refurbished'
+    items={[
+      {
+        title: 'Ophthalmology General',
+        description:
+          'Essential tools for ophthalmic exams, including ophthalmoscopes, retinoscopes, and diagnostic charts.',
+        icon: 'flat-color-icons:approval',
+      },
+
+      {
+        title: 'Autorefractor – Keratomerter',
+        description:
+          'Automated devices for measuring refractive errors and corneal curvature, ensuring precise vision assessments.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Pachymater/ Ultrasound',
+        description:
+          'High-precision devices for corneal thickness measurement and ocular ultrasound imaging, ideal for glaucoma and cataract assessments.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'OCT Systems & Fundus Camera',
+        description: 'Advanced imaging systems for retinal analysis, including OCT scanners and digital fundus cameras.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Ophthalmic Laser & Slit Lamp',
+        description:
+          'Specialized equipment for laser treatments and high-precision slit lamp examinations.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Topographer',
+        description:
+          'Devices for mapping corneal surfaces, ideal for fitting contact lenses and diagnosing keratoconus',
+        icon: 'flat-color-icons:approval',
+      },
+    ]}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-[#17173ce1]'></div>
+    </Fragment>
+  </Features2>
+
+  <div class='h-[5px] bg-blue-50 dark:bg-[#17173ce1]'></div>
+
+  <div class='bg-blue-50 dark:bg-[#17173ce1]'>
+    <div class='max-w-6xl mx-auto'>
+      <BrandsCarousel brandsData={equipmentsBrands} />
+    </div>
+  </div>
+
+  <div class='h-[64px] bg-blue-50 dark:bg-[#17173ce1]'></div>
+</Layout>

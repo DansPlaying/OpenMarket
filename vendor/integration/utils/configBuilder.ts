@@ -82,11 +82,10 @@ export interface UIConfig {
   theme: string;
 }
 
-const DEFAULT_SITE_NAME = 'Website';
 
 const getSite = (config: Config) => {
   const _default = {
-    name: DEFAULT_SITE_NAME,
+    name: "Open Market Investment Ink",
     site: undefined,
     base: '/',
     trailingSlash: false,
@@ -98,11 +97,10 @@ const getSite = (config: Config) => {
 };
 
 const getMetadata = (config: Config) => {
-  const siteConfig = getSite(config);
 
   const _default = {
     title: {
-      default: siteConfig?.name || DEFAULT_SITE_NAME,
+      default: "Open Market Investment Ink",
       template: '%s',
     },
     description: '',

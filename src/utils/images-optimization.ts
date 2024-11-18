@@ -4,7 +4,7 @@ import { transformUrl, parseUrl } from 'unpic';
 import type { ImageMetadata } from 'astro';
 import type { HTMLAttributes } from 'astro/types';
 
-type Layout = 'fixed' | 'constrained' | 'fullWidth' | 'cover' | 'responsive' | 'contained';
+export type Layout = 'fixed' | 'constrained' | 'fullWidth' | 'cover' | 'responsive' | 'contained';
 
 export interface ImageProps extends Omit<HTMLAttributes<'img'>, 'src'> {
   src?: string | ImageMetadata | null;

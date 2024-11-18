@@ -1,0 +1,126 @@
+---
+import BrandsCarousel from '~/components/common/BrandsCarousel.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { glassesBrands } from '../../core/data/images-list'; // Importa la lista de imágenes
+// import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Frames and Sunglasses',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/4-banner.jpg',
+      alt: 'Frames and Sunglasses',
+    }}
+  >
+    <Fragment slot='title'>Frames and Sunglasses</Fragment>
+
+    <Fragment slot='subtitle'>
+      <span class='hidden sm:inline'>
+        <span class='font-semibold'>We distribute </span> all the Frames and Sunglasses for your stand.</span
+      >
+    </Fragment>
+  </Hero>
+
+  <div class='bg-blue-50 dark:bg-transparent'>
+    <div class='max-w-6xl mx-auto'>
+      <BrandsCarousel brandsData={glassesBrands} />
+    </div>
+  </div>
+
+  <div class='h-[120px] bg-blue-50 dark:bg-transparent'></div>
+
+  <Content
+    isReversed
+    title='Clasic Frames'
+    tagline='Timeless designs'
+    items={[
+      {
+        title: 'Metal Frames',
+        description: 'Elegant and durable metal frames. Available in a variety of classic styles and finishes.',
+      },
+      {
+        title: 'Iconic Acetate Designs',
+        description:
+          'Stylish acetate frames combining comfort and durability. A popular choice for timeless everyday wear.',
+      },
+      {
+        title: 'Vintage-Inspired Collections',
+        description: 'Retro-inspired frames that blend modern materials with classic aesthetics. ',
+      },
+    ]}
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/classic-frames.jpg',
+      alt: 'Frames and sunglasses',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-[#17173ce1]'></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    title='Exclusive frames'
+    tagline='Unique designs'
+    items={[
+      {
+        title: 'Luxury Titanium Frames',
+        description:
+          'Premium titanium frames that combine lightweight comfort with exceptional durability. Designed for a sophisticated clientele.',
+      },
+      {
+        title: 'Limited-Edition Designer Styles',
+        description:
+          'Exclusive frames crafted by top designers, offering unique shapes and bold accents for a standout look.',
+      },
+      {
+        title: 'Exclusive Metal & Acetate Blends',
+        description:
+          'Elegant frames combining metal and acetate for a unique, refined style. Perfect for customers seeking exclusivity.',
+      },
+    ]}
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/exclusive-designs.png',
+      alt: 'Frames and sunglasses',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title='Sunglasses'
+    tagline='Outside protection'
+    items={[
+      {
+        title: 'Polarized Protection',
+        description:
+          'Sunglasses with polarized lenses to reduce glare and provide superior UV protection for all-day comfort.',
+      },
+      {
+        title: 'Classic Aviator Styles',
+        description:
+          'Timeless aviator frames, a customer favorite for a bold yet versatile look. Ideal for men and women.',
+      },
+      {
+        title: 'Trendy Oversized Frames',
+        description: 'Fashion-forward oversized sunglasses that offer maximum coverage and a chic appearance.',
+      },
+    ]}
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/sunglasses.jpg',
+      alt: 'Frames and sunglasses',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-[#17173ce1]'></div>
+    </Fragment>
+  </Content>
+</Layout>

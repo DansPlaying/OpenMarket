@@ -17,7 +17,7 @@ interface Links {
 
 export interface Props {
   links: Array<Links>;
-  secondaryLinks: Array<Link>;
+  // secondaryLinks: Array<Link>;
   // socialLinks: Array<Link>;
   footNote?: string;
   theme?: string;
@@ -25,7 +25,7 @@ export interface Props {
 
 const {
   // socialLinks = [],
-  secondaryLinks = [],
+  // secondaryLinks = [],
   links = [],
   //  footNote = '',
   theme = 'light',
@@ -38,11 +38,11 @@ const {
     class='relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
   >
     <div class='grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12'>
-      <div class='col-span-8'>
+      <div class='col-span-12 md:col-span-6'>
         <div class='mb-2'>
-          <a class='inline-block font-bold text-xl' href={getHomePermalink()}>OpticaMarket</a>
+          <a class='inline-block font-bold text-xl' href={getHomePermalink()}>Open Market Investment Ink</a>
         </div>
-        <div class='text-sm text-muted flex gap-1'>
+        <!-- <div class='text-sm text-muted flex gap-1'>
           {
             secondaryLinks.map(({ text, href }, index) => (
               <>
@@ -55,11 +55,11 @@ const {
               </>
             ))
           }
-        </div>
+        </div> -->
       </div>
       {
         links.map(({ title, links }) => (
-          <div class='col-span-2'>
+          <div class='col-span-4 md:col-span-2'>
             <div class='dark:text-gray-300 font-medium mb-2'>{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class='text-sm'>

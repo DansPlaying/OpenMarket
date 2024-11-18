@@ -18,6 +18,7 @@ const {
   isReversed = false,
   isAfterContent = false,
   hasBeforeContent = false,
+  imageLayout = "responsive",
   id,
   isDark = false,
   classes = {},
@@ -80,8 +81,9 @@ const {
                   width={500}
                   height={500}
                   widths={[400, 768]}
+                  
                   sizes="(max-width: 768px) 100vw, 432px"
-                  layout="responsive"
+                  layout={imageLayout}
                   {...image}
                 />
               )}

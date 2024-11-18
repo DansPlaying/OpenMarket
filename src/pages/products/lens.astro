@@ -1,0 +1,115 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Ophthalmic lenses',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/monofocals.webp',
+      alt: 'Frames and Sunglasses',
+    }}
+  >
+    <Fragment slot='title'>Ophthalmic Lenses</Fragment>
+
+    <Fragment slot='subtitle'>
+      <span class='hidden sm:inline'>
+        <span class='font-semibold'>We offer </span> custom solutions with the best optical quality.</span
+      >
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    title='Monofocal'
+    subtitle='Visual correction for a specific distance'
+    items={[
+      {
+        title: 'Reading Lenses',
+        description: 'Optimized for close-range tasks like reading and crafting, ensuring clarity and comfort.',
+      },
+      {
+        title: 'Distance Vision Lenses',
+        description:
+          'Perfect for activities like driving or outdoor use, providing sharp and focused vision at long distances.',
+      },
+      {
+        title: 'Digital Screen Monofocals',
+        description: 'Designed for extended screen time, reducing eye strain and enhancing mid-range clarity.',
+      },
+    ]}
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/lenses-1.webp',
+      alt: 'Monofocal lenses',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-[#17173ce1]'></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    title='Bifocal'
+    subtitle='Two correction powers in the same lens'
+    items={[
+      {
+        title: 'Classic Bifocal Lenses',
+        description:
+          'Traditional design with a visible segment for near and distance vision, ideal for daily tasks.',
+      },
+      {
+        title: 'Flat-Top Bifocals',
+        description:
+          'A popular choice featuring a distinct near-vision segment, ensuring seamless switching between distances.',
+      },
+      {
+        title: 'High-Performance Bifocals',
+        description:
+          'Enhanced lenses for professionals and active lifestyles, combining clarity and functionality.',
+      },
+    ]}
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/bifocal.png',
+      alt: 'Bifocal lenses',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title='Progressive'
+    tagline='Combine multiple correction powers in a single lens gradually'
+    items={[
+      {
+        title: 'Progressive Lenses',
+        description:
+          'Seamless transition between near, intermediate, and distance vision, perfect for an active lifestyle.',
+      },
+      {
+        title: 'Digital Multifocal Lenses',
+        description:
+          'Engineered for screen users, offering sharp vision at all distances with enhanced intermediate clarity.',
+      },
+      {
+        title: 'Premium Multifocals',
+        description: 'High-quality lenses with wider viewing zones and reduced distortion for ultimate comfort and precision.',
+      },
+    ]}
+    image={{
+      src: 'https://rgoptics-imagenes.s3.us-west-1.wasabisys.com/open-market/multifocal.png',
+      alt: 'Frames and sunglasses',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-[#17173ce1]'></div>
+    </Fragment>
+  </Content>
+</Layout>

@@ -65,4 +65,4 @@ If you have any questions about this Privacy Policy or the way we handle your in
 
 ---
 
-Thank you for choosing **OpticaMarket** as your trusted wholesale provider of ophthalmic products and supplies.  
+Thank you for choosing **Open Market Investment Ink** as your trusted wholesale provider of ophthalmic products and supplies.  
