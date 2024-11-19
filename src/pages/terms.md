@@ -5,13 +5,13 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 _Last updated_: November 15, 2024
 
-Welcome to **Open Market Investment Ink**. These Terms and Conditions ("Terms") govern the purchase and use of our products and services. By interacting with our company or making a purchase, you agree to comply with these Terms.
+Welcome to **OPEN MARKET inversiones inc**. These Terms and Conditions ("Terms") govern the purchase and use of our products and services. By interacting with our company or making a purchase, you agree to comply with these Terms.
 
 ---
 
 ## 1. Scope of Service  
 
-**Open Market Investment Ink** operates as a wholesale supplier of ophthalmic products, supplies, and related items. We cater exclusively to businesses, laboratories, and professionals in the optical and medical industries.  
+**OPEN MARKET inversiones inc** operates as a wholesale supplier of ophthalmic products, supplies, and related items. We cater exclusively to businesses, laboratories, and professionals in the optical and medical industries.  
 
 ---
 
@@ -44,7 +44,7 @@ Welcome to **Open Market Investment Ink**. These Terms and Conditions ("Terms") 
 
 ### 4.2 Delivery Times  
 - Delivery estimates are approximate and depend on product availability and shipping carrier schedules.  
-- **Open Market Investment Ink** is not liable for delays caused by carriers or unforeseen circumstances.  
+- **OPEN MARKET inversiones inc** is not liable for delays caused by carriers or unforeseen circumstances.  
 
 ---
 
@@ -59,7 +59,7 @@ Welcome to **Open Market Investment Ink**. These Terms and Conditions ("Terms") 
 
 ## 6. Limitations of Liability  
 
--**Open Market Investment Ink** is not liable for damages or losses resulting from the misuse of our products.  
+-**OPEN MARKET inversiones inc** is not liable for damages or losses resulting from the misuse of our products.  
 - Our liability is limited to the value of the order placed.  
 - Indirect or consequential damages are excluded from our liability coverage.  
 
@@ -67,7 +67,7 @@ Welcome to **Open Market Investment Ink**. These Terms and Conditions ("Terms") 
 
 ## 7. Use of Products  
 
-- Products supplied by **Open Market Investment Ink** are intended for professional use only.  
+- Products supplied by **OPEN MARKET inversiones inc** are intended for professional use only.  
 - Customers are responsible for ensuring compliance with all applicable laws and regulations regarding the use and distribution of our products.  
 
 
@@ -75,7 +75,7 @@ Welcome to **Open Market Investment Ink**. These Terms and Conditions ("Terms") 
 
 ## 8. Amendments  
 
-**Open Market Investment Ink** reserves the right to update these Terms and Conditions at any time. Customers will be notified of significant changes via our usual communication channels.
+**OPEN MARKET inversiones inc** reserves the right to update these Terms and Conditions at any time. Customers will be notified of significant changes via our usual communication channels.
 
 ---
 
@@ -95,4 +95,4 @@ If you have questions or concerns about these Terms, please reach out to us:
 
 ---
 
-Thank you for choosing **Open Market Investment Ink** as your wholesale partner for ophthalmic products and supplies.  
+Thank you for choosing **OPEN MARKET inversiones inc** as your wholesale partner for ophthalmic products and supplies.  

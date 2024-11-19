@@ -85,7 +85,7 @@ export interface UIConfig {
 
 const getSite = (config: Config) => {
   const _default = {
-    name: "Open Market Investment Ink",
+    name: "OPEN MARKET inversiones inc",
     site: undefined,
     base: '/',
     trailingSlash: false,
@@ -100,7 +100,7 @@ const getMetadata = (config: Config) => {
 
   const _default = {
     title: {
-      default: "Open Market Investment Ink",
+      default: "OPEN MARKET inversiones inc",
       template: '%s',
     },
     description: '',

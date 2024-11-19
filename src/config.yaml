@@ -1,5 +1,5 @@
 site:
-  name: Open market investment ink
+  name: OPEN MARKET inversiones inc
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Open market investment ink
-    template: 'Open market investment ink'
-  description: "Open market investment ink"
+    default: OPEN MARKET inversiones inc
+    template: 'OPEN MARKET inversiones inc'
+  description: "OPEN MARKET inversiones inc"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Open market investment ink
+    site_name: OPEN MARKET inversiones inc
     images:
       - url: '~/assets/images/default.png'
         width: 1200
