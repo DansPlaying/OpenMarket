@@ -59,9 +59,9 @@ We may update this Privacy Policy periodically to reflect changes in our operati
 
 If you have any questions about this Privacy Policy or the way we handle your information, please contact us:  
 
-- **Email:** [Your Email Address]  
-- **Phone:** [Your Phone Number]  
-- **Address:** [Your Business Address]  
+- **Email:** info@openmarketusa.com  
+- **Phone:** +1 (305) 546-6848 
+
 
 ---
 
