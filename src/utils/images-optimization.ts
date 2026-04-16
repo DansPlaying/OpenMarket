@@ -313,15 +313,17 @@ export async function getImagesOptimized(
       width = Number(height * aspectRatio);
     } else if (layout !== 'fullWidth') {
       // Fullwidth images have 100% width, so aspectRatio is applicable
-      console.error('When aspectRatio is set, either width or height must also be set');
-      console.error('Image', image);
+      throw new Error(
+        `When aspectRatio is set, either width or height must also be set. Image: ${typeof image === 'string' ? image : image.src}`
+      );
     }
   } else if (width && height) {
     aspectRatio = width / height;
   } else if (layout !== 'fullWidth') {
     // Fullwidth images don't need dimensions
-    console.error('Either aspectRatio or both width and height must be set');
-    console.error('Image', image);
+    throw new Error(
+      `Either aspectRatio or both width and height must be set. Image: ${typeof image === 'string' ? image : image.src}`
+    );
   }
 
   let breakpoints = getBreakpoints({ width: width, breakpoints: widths, layout: layout });

@@ -1,13 +1,10 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-// import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import Carousel from '~/components/common/Carousel.astro';
-// import Headline from '~/components/ui/Headline.astro';
 import BrandsCarousel from '~/components/common/BrandsCarousel.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import { glassesBrands, suppliesBrands, equipmentsBrands } from '../core/data/images-list'; // Importa la lista de imágenes
-// import Steps from '~/components/widgets/Steps.astro';
+import { glassesBrands, suppliesBrands, equipmentsBrands } from '../core/data/images-list';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
@@ -76,15 +73,13 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <div class='h-[5px] bg-blue-50 dark:dark:bg-[#17173ce1]'></div>
+  <div class='h-[5px] bg-blue-50 dark:bg-[#17173ce1]'></div>
 
-  <div class='bg-blue-50 dark:dark:bg-[#17173ce1]'>
-    <div class='max-w-6xl mx-auto'>
-      <BrandsCarousel brandsData={glassesBrands} />
-    </div>
+  <div class='bg-blue-50 dark:bg-[#17173ce1]'>
+    <BrandsCarousel brandsData={glassesBrands} />
   </div>
 
-  <div class='h-[64px] bg-blue-50 dark:dark:bg-[#17173ce1]'></div>
+  <div class='h-[64px] bg-blue-50 dark:bg-[#17173ce1]'></div>
 
   <Content
     isAfterContent
@@ -130,9 +125,7 @@ const metadata = {
   <div class='h-[5px] bg-blue-50 dark:bg-[#17173ce1]'></div>
 
   <div class='bg-blue-50 dark:bg-[#17173ce1]'>
-    <div class='max-w-6xl mx-auto'>
-      <BrandsCarousel brandsData={suppliesBrands} />
-    </div>
+    <BrandsCarousel brandsData={suppliesBrands} />
   </div>
 
   <div class='h-[64px] bg-blue-50 dark:bg-[#17173ce1]'></div>
@@ -184,54 +177,10 @@ const metadata = {
   <div class='h-[5px] bg-blue-50 dark:bg-[#17173ce1]'></div>
 
   <div class='bg-blue-50 dark:bg-[#17173ce1]'>
-    <div class='max-w-6xl mx-auto'>
-      <BrandsCarousel brandsData={equipmentsBrands} />
-    </div>
+    <BrandsCarousel brandsData={equipmentsBrands} />
   </div>
 
   <div class='h-[64px] bg-blue-50 dark:bg-[#17173ce1]'></div>
-
-  <!-- <Steps
-    title='Get all the necessary stock for your enterprise'
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Contact us</span>',
-        description:
-          "Complete ",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  /> -->
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <!-- <BlogLatestPosts
-    title='Find out more content in our Blog'
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  /> -->
 
   <!-- FAQs Widget ******************* -->
 

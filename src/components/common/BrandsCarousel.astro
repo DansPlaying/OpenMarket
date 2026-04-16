@@ -2,58 +2,62 @@
 const { brandsData } = Astro.props;
 
 const brands = brandsData.concat(brandsData);
+const slideWidth = 200;
+const trackWidth = slideWidth * brands.length;
 ---
 
-<style>
-  .slider {
-    height: auto;
+<style define:vars={{ trackWidth: `${trackWidth}px` }}>
+  .brands-slider {
     overflow: hidden;
-  }
-
-  .slider .slide-track {
-    display: flex;
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 40s linear infinite;
-     width: calc(250px * 12);
-  }
-
-  .slider .slide {
-    width: 250px;
-  }
-
-  /* .slider .slide img {
-      width: 100%;
-  } */
-
-  @keyframes scroll {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(calc(-200px * 7));
-      transform: translateX(calc(-200px * 7));
-    }
-  }
-
-  .customDiv {
-    display: flex;
+    width: 100%;
     background-color: white;
+    padding: 0.625rem 0;
+  }
+
+  .brands-slider .slide-track {
+    display: flex;
+    align-items: center;
+    width: var(--trackWidth);
+    animation: brands-scroll 30s linear infinite;
+  }
+
+  .brands-slider .slide {
+    width: 200px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .brands-slider .slide img {
+    max-height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  @keyframes brands-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      /* -50% of the track width = exactly the original brands' total width.
+         Since the track is [originals][duplicates], this lands at the start
+         of the duplicates — visually identical to the start — making the
+         loop perfectly seamless for any number of brands. */
+      transform: translateX(-50%);
+    }
   }
 </style>
 
-<div class='slider max-w-7xl'>
+<div class='brands-slider'>
   <div class='slide-track'>
     {
       brands.map((brand: string, index: number) => (
-        <div class='slide mt-2 customDiv p-2' >
-          <img src={brand} alt={`Brand ${index + 1}`} />
+        <div class='slide'>
+          <img src={brand} alt={`Brand ${index + 1}`} loading='lazy' />
         </div>
       ))
     }
   </div>
 </div>
-
-<script></script>
